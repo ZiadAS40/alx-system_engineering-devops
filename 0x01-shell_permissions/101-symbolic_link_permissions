@@ -1,0 +1,2 @@
+#!/bin/bash
+[ -e "_hello" ] && chown -h vincent:staff "_hello"
