@@ -1,2 +1,2 @@
 #!/bin/bash
-any
+find . -type d -exec chmod 711 {} +
