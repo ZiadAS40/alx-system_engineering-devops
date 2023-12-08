@@ -1,2 +1,2 @@
 #!/bin/bash
-any
+chmod 354 hello
