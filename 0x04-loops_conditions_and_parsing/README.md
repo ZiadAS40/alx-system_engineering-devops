@@ -1,0 +1,1 @@
+loops, condition and parsing project on Bash
