@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # iterates from 1 to 20 and for the 4th 'bad luck from China' for the 9th "bad luck from Japan" for the 17th "bad luck from italy"
 i=0
-while [ $i -lt 10 ]; do
-echo "Best School"
+while [ $i -lt 21 ]; do
+echo "$i"
 i=$((i+1))
 case "$i" in 
 4)

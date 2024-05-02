@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
-# displays The content of the current directory In a list format Where only the part of the name after the first dash is displayed
+# Displays the content of the current directory in a list format
+# where only the part of the name after the first dash is displayed.
+# Hidden files are not displayed.
 for i in *; do
-newname=${i#[0-9]*-}
+if [[ "$i" == *-* ]]; then
+newname=${i#*-}
 echo "$newname"
+else
+echo "$i"
+fi
 done

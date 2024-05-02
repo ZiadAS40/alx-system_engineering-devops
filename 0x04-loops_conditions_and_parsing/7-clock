@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 #display the time
-for ((i = 0; i < 13; i++)); do
+i=0
+while [ $i -lt 13 ]; do
 echo "Hour: $i"
-for ((j = 0; j < 60; j++)); do
+i=$((i+1))
+j=1
+while [ $j -lt 60 ]; do
 echo "$j"
+j=$((j+1))
 done
 done
