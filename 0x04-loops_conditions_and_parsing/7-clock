@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# display the time
+for ((i = 0; i < 13; i++)); do
+echo "Hour: $i"
+for ((j = 0; j < 60; j++)); do
+echo "$j"
+done
+done

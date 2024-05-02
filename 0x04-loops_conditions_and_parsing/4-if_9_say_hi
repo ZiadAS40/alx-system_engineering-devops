@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# echo Best Scool ten time but after the 9th display Hi
+i=0
+while [ $i -lt 10 ]; do
+echo "Best School"
+i=$((i+1))
+if [ $i -eq 9 ]; then
+echo "Hi"
+fi
+done
