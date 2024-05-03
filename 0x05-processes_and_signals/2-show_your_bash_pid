@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# displaying all the running processes
+ps -u | sed -n '/bash/p'
