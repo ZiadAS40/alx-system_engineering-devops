@@ -1,0 +1,8 @@
+# SSH client configuration file
+# The SSH client will only use Key Authentication
+
+Host *
+    HostName 52.87.251.208
+    SeverAliveInterval 120
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
