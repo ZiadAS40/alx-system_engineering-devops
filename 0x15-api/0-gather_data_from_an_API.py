@@ -8,7 +8,7 @@ if __name__ == "__main__":
     user = requests.get(url + "users/{}".format(sys.argv[1])).json()
     todos = requests.get(url + "todos", params={"userId": sys.argv[1]}).json()
 
-    cs = [t.get("title") for todo in todos if todo.get("completed") is True]
+    cs = [todo.get("title") for todo in todos if todo.get("completed") is True]
     print("Employee {} is done with tasks({}/{}):".format(
         user.get("name"), len(cs), len(todos)))
     [print("\t {}".format(c)) for c in cs]
