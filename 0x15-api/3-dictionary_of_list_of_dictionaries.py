@@ -6,7 +6,7 @@ import requests
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/"
     users = requests.get(url + "users").json()
-    todos = requests.get(url + "todos").json()
+    todos = requests.get(url + "todos", params={"userId": u.get("id")}).json()
 
     json_file = "todo_all_employees.json"
     my_dict = ({user.get("id"): [{"task": todo.get("title"),
