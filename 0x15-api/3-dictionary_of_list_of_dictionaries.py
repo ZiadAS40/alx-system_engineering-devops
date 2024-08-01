@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """Returns an information about to-do list for a given employee ID."""
-import requests
-import sys
 import json
+import requests
 
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/"
@@ -12,7 +11,7 @@ if __name__ == "__main__":
     json_file = "todo_all_employees.json"
     my_dict = ({user.get("id"): [{"task": todo.get("title"),
                                   "completed": todo.get("completed"),
-                                  "username": user.get("name")}
+                                  "username": user.get("username")}
                                   for todo in todos] for user in users})
 
     with open(json_file, mode='w') as file:
