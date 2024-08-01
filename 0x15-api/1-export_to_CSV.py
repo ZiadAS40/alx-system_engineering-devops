@@ -13,7 +13,6 @@ if __name__ == "__main__":
     with open(csv_file, mode='w', newline='') as file:
         writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         for todo in todos:
-            writer.writerow(("{}".format(sys.argv[1]), "{}"
-                            .format(user.get("name")), "{}"
-                            .format(True if todo.get("completed")
-                            else False), "{}".format(todo.get("title"))))
+            writer.writerow((sys.argv[1], user.get("username"),
+                            True if todo.get("completed")
+                            else False, todo.get("title")))
